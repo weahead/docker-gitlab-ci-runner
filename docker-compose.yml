@@ -1,0 +1,19 @@
+version: '2'
+services:
+  runner:
+    image: weahead/docker-gitlab-ci-runner:latest
+    build: .
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
+     - runner-config:/etc/gitlab-runner
+    environment:
+      REGISTER_NON_INTERACTIVE: 'TRUE'
+      REGISTRATION_TOKEN:
+      CI_SERVER_URL:
+      RUNNER_EXECUTOR: 'docker'
+      RUNNER_NAME:
+      DOCKER_IMAGE: 'docker:git'
+      DOCKER_PRIVILEGED: 'TRUE'
+volumes:
+  runner-config:
+    driver: local

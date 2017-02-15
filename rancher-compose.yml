@@ -1,0 +1,9 @@
+version: '2'
+services:
+  runner:
+    labels:
+      io.rancher.container.pull_image: always
+
+volumes:
+  runner-config:
+    driver: rancher-efs
