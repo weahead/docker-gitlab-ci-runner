@@ -1,4 +1,4 @@
-FROM gitlab/gitlab-runner:latest
+FROM gitlab/gitlab-runner:v1.10.4
 
 RUN apt-get update && apt-get install -yqq --no-install-recommends \
     curl \

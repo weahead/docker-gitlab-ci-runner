@@ -14,6 +14,7 @@ services:
       RUNNER_NAME:
       DOCKER_IMAGE: 'docker:git'
       DOCKER_PRIVILEGED: 'TRUE'
+      RUNNER_ENV:
 volumes:
   runner-config:
     driver: local
